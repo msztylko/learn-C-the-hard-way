@@ -1,6 +1,6 @@
 CFLAGS=-Wall -g
 
-all: clean ex1 ex3 ex7 ex8 ex9 ex10 ex10b
+all: clean ex1 ex3 ex7 ex8 ex9 ex10 ex10b ex11
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -16,6 +16,8 @@ ex10:
 	gcc $(CFLAGS) ex10.c -o ex10.o
 ex10b:
 	gcc $(CFLAGS) ex10b.c -o ex10b.o
+ex11:
+	gcc $(CFLAGS) ex11.c -o ex11.o
 clean:
 	rm -f ex1.o
 	rm -f ex3.o
@@ -24,3 +26,4 @@ clean:
 	rm -f ex9.o
 	rm -f ex10.o
 	rm -f ex10b.o
+	rm -f ex11.o

@@ -3,7 +3,8 @@ CFLAGS=-Wall -g
 all: clean ex1 ex3 ex7 ex8 ex9 $\
  ex10 ex10b ex11 ex12 ex13 ex14 ex14b $\
  ex15 ex16 $\
- pointer-ex1 pointer-ex2 pointer-ex3
+ pointer-ex1 pointer-ex2 pointer-ex3 $\
+ int_copy
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -39,6 +40,8 @@ pointer-ex2:
 	gcc $(CFLAGS) pointer-ex2.c -o pointer-ex2.o
 pointer-ex3:
 	gcc $(CFLAGS) pointer-ex3.c -o pointer-ex3.o
+int_copy:
+	gcc $(CFLAGS) int_copy.c -o int_copy.o
 clean:
 	rm -f ex1.o
 	rm -f ex3.o
@@ -57,3 +60,4 @@ clean:
 	rm -f pointer-ex1.o
 	rm -f pointer-ex2.o
 	rm -f pointer-ex3.o
+	rm -f int_copy.o

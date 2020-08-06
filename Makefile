@@ -5,7 +5,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  ex15 ex16 $\
  pointer-ex1 pointer-ex2 pointer-ex3 pointer-ex4 $\
  int_copy crazy_pointers bubble_1 bubble_2 bubble_3 $\
- bubble_4
+ bubble_4 bubble_5
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -55,6 +55,8 @@ bubble_3:
 	gcc $(CFLAGS) bubble_3.c -o bubble_3.o
 bubble_4:
 	gcc $(CFLAGS) bubble_4.c -o bubble_4.o
+bubble_5:
+	gcc $(CFLAGS) bubble_5.c -o bubble_5.o
 clean:
 	rm -f ex1.o
 	rm -f ex3.o
@@ -80,3 +82,4 @@ clean:
 	rm -f bubble_2.o
 	rm -f bubble_3.o
 	rm -f bubble_4.o
+	rm -f bubble_5.o

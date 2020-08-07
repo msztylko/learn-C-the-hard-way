@@ -5,7 +5,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  ex15 ex16 $\
  pointer-ex1 pointer-ex2 pointer-ex3 pointer-ex4 $\
  int_copy crazy_pointers bubble_1 bubble_2 bubble_3 $\
- bubble_4 bubble_5 static-var
+ bubble_4 bubble_5 static-var heap
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -49,6 +49,8 @@ crazy_pointers:
 	gcc $(CFLAGS) crazy_pointers.c -o crazy_pointers.o
 static-var:
 	gcc $(CFLAGS) static-var.c -o static-var.o
+heap:
+	gcc $(CFLAGS) heap.c -o heap.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -86,3 +88,4 @@ clean:
 	rm -f bubble_4.o
 	rm -f bubble_5.o
 	rm -f static-var.o
+	rm -f heap.o

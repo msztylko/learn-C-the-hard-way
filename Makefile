@@ -2,7 +2,7 @@ CFLAGS=-Wall -g
 
 all: clean ex1 ex3 ex7 ex8 ex9 $\
  ex10 ex10b ex11 ex12 ex13 ex14 ex14b $\
- ex15 ex16 $\
+ ex15 ex16 ex17 $\
  pointer-ex1 pointer-ex2 pointer-ex3 pointer-ex4 $\
  int_copy crazy_pointers bubble_1 bubble_2 bubble_3 $\
  bubble_4 bubble_5 static-var heap
@@ -35,6 +35,8 @@ ex15:
 	gcc $(CFLAGS) ex15.c -o ex15.o
 ex16:
 	gcc $(CFLAGS) ex16.c -o ex16.o
+ex17:
+	gcc $(CFLAGS) ex17.c -o ex17.o
 pointer-ex1:
 	gcc $(CFLAGS) pointer-ex1.c -o pointer-ex1.o
 pointer-ex2:
@@ -76,6 +78,7 @@ clean:
 	rm -f ex14b.o
 	rm -f ex15.o
 	rm -f ex16.o
+	rm -f ex17.o
 	rm -f pointer-ex1.o
 	rm -f pointer-ex2.o
 	rm -f pointer-ex3.o

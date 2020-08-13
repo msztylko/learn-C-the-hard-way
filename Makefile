@@ -6,7 +6,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  pointer-ex1 pointer-ex2 pointer-ex3 pointer-ex4 $\
  int_copy crazy_pointers bubble_1 bubble_2 bubble_3 $\
  bubble_4 bubble_5 static-var heap data-types user-input $\
- reverse-digit 
+ reverse-digit fibonacci
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -60,6 +60,8 @@ user-input:
 	gcc $(CFLAGS) user-input.c -o user-input.o
 reverse-digit:
 	gcc $(CFLAGS) reverse-digit.c -o reverse-digit.o
+fibonacci:
+	gcc $(CFLAGS) fibonacci.c -o fibonacci.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -101,3 +103,4 @@ clean:
 	rm -f heap.o
 	rm -f user-input.o
 	rm -f reverse-digit.o
+	rm -f fibonacci.o

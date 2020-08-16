@@ -109,6 +109,7 @@ clean:
 	rm -f bubble_4.o
 	rm -f bubble_5.o
 	rm -f static-var.o
+	rm -f data-types.o
 	rm -f heap.o
 	rm -f user-input.o
 	rm -f reverse-digit.o

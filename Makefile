@@ -6,7 +6,8 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  pointer-ex1 pointer-ex2 pointer-ex3 pointer-ex4 $\
  int_copy crazy_pointers bubble_1 bubble_2 bubble_3 $\
  bubble_4 bubble_5 static-var heap data-types user-input $\
- reverse-digit fibonacci convert-base square-root sort
+ reverse-digit fibonacci convert-base square-root sort $\
+ factorial
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -68,6 +69,8 @@ square-root:
 	gcc $(CFLAGS) square-root.c -o square-root.o
 sort:
 	gcc $(CFLAGS) sort.c -o sort.o
+factorial:
+	gcc $(CFLAGS) factorial.c -o factorial.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -113,3 +116,4 @@ clean:
 	rm -f convert-base.o
 	rm -f square-root.o
 	rm -f sort.o
+	rm -f factorial.o

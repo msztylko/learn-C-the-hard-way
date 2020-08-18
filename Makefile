@@ -7,7 +7,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  int_copy crazy_pointers bubble_1 bubble_2 bubble_3 $\
  bubble_4 bubble_5 static-var heap data-types user-input $\
  reverse-digit fibonacci convert-base square-root sort $\
- factorial tomorrow-date
+ factorial tomorrow-date tomorrow-date2
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -73,6 +73,8 @@ factorial:
 	gcc $(CFLAGS) factorial.c -o factorial.o
 tomorrow-date:
 	gcc $(CFLAGS) tomorrow-date.c -o tomorrow-date.o
+tomorrow-date2:
+	gcc $(CFLAGS) tomorrow-date2.c -o tomorrow-date2.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -121,3 +123,4 @@ clean:
 	rm -f sort.o
 	rm -f factorial.o
 	rm -f tomorrow-date.o
+	rm -f tomorrow-date2.o

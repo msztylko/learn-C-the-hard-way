@@ -7,36 +7,66 @@ struct entry
     char definition[50];
 };
 
-bool equalStrings(const char s1[], const char s2[])
-{
-    int i = 0;
-    bool areEqual;
+// Function to compare two character strings
 
-    while (s1[i] == s2[i] &&
-           s1[i] != '\0' &&
-           s2[i] != '\0')
+int compareStrings(const char s1[], const char s2[])
+{
+    int i = 0, answer;
+    
+    while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
         ++i;
 
-    if (s1[i] == '\0' && s2[i] == '\0')
-        areEqual = true;
+    if (s1[i] < s2[i])
+        answer = -1;
+    else if (s1[i] == s2[i])
+        answer = 0;
     else
-        areEqual = false;
+        answer = 1;
 
-    return areEqual;
+    return answer;
 }
+
+// bool equalStrings(const char s1[], const char s2[])
+// {
+//     int i = 0;
+//     bool areEqual;
+// 
+//     while (s1[i] == s2[i] &&
+//            s1[i] != '\0' &&
+//            s2[i] != '\0')
+//         ++i;
+// 
+//     if (s1[i] == '\0' && s2[i] == '\0')
+//         areEqual = true;
+//     else
+//         areEqual = false;
+// 
+//     return areEqual;
+// }
 
 // function to look up a word inside a dictionary
 
 int lookup(const struct entry dictionary[], const char search[],
            const int entries)
 {
-    int i;
-    bool equalStrings(const char s1[], const char s2[]);
+    int low = 0;
+    int high = entries - 1;
+    int mid, result;
+    int compareStrings(const char s1[], const char s2[]);
 
-    for (i = 0; i < entries; ++i)
-        if (equalStrings(search, dictionary[i].word))
-            return i;
+    while (low <= high)
+    {
+        mid = (low + high) / 2;
+        result = compareStrings(dictionary[mid].word, search);
 
+        if (result == -1)
+            low = mid + 1;
+        else if (result == 1)
+            high = mid - 1;
+        else
+            return mid;
+    }
+    
     return -1;
 }
 
@@ -54,7 +84,7 @@ int main(void)
     { "aigrette", "an ornamental cluster of feathers" },
     { "ajar", "partially opened" } };
 
-    char word[10];
+    char word[15];
     int entries = 10;
     int entry;
     int lookup(const struct entry dictionary[], const char search[],

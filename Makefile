@@ -83,7 +83,7 @@ array-of-structures:
 concat-array:
 	gcc $(CFLAGS) concat-array.c -o concat-array.o
 equal-strings:
-	gcc $(CFLAGS) equal-strings.c -o equal-string.o
+	gcc $(CFLAGS) equal-strings.c -o equal-strings.o
 read-line:
 	gcc $(CFLAGS) read-line.c -o read-line.o
 bubble_1:

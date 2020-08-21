@@ -8,7 +8,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  bubble_4 bubble_5 static-var heap data-types user-input $\
  reverse-digit fibonacci convert-base square-root sort $\
  factorial tomorrow-date tomorrow-date2 update-time $\
- array-of-structures concat-array equal-strings
+ array-of-structures concat-array equal-strings read-line $\
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -84,6 +84,8 @@ concat-array:
 	gcc $(CFLAGS) concat-array.c -o concat-array.o
 equal-strings:
 	gcc $(CFLAGS) equal-strings.c -o equal-string.o
+read-line:
+	gcc $(CFLAGS) read-line.c -o read-line.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -137,3 +139,4 @@ clean:
 	rm -f array-of-structures.o
 	rm -f concat-array.o
 	rm -f equal-strings.o
+	rm -f read-line.o

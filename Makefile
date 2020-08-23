@@ -9,7 +9,8 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  reverse-digit fibonacci convert-base square-root sort $\
  factorial tomorrow-date tomorrow-date2 update-time $\
  array-of-structures concat-array equal-strings read-line $\
- count-words dictionary-lookup str2int
+ count-words dictionary-lookup str2int linked-list $\
+
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -93,6 +94,8 @@ dictionary-lookup:
 	gcc $(CFLAGS) dictionary-lookup.c -o dictionary-lookup.o
 str2int:
 	gcc $(CFLAGS)  str2int.c -o str2int.o
+linked-list:
+	gcc $(CFLAGS) linked-list.c -o linked-list.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -150,3 +153,4 @@ clean:
 	rm -f count-words.o
 	rm -f dictionary-lookup.o
 	rm -f str2int.o
+	rm -f linked-list.o

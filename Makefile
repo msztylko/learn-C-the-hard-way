@@ -10,7 +10,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  factorial tomorrow-date tomorrow-date2 update-time $\
  array-of-structures concat-array equal-strings read-line $\
  count-words dictionary-lookup str2int linked-list $\
- travers-llist ptr-with-fn exchange-pointer
+ travers-llist ptr-with-fn exchange-pointer ptr-from-fn
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -102,6 +102,8 @@ ptr-with-fn:
 	gcc $(CFLAGS) ptr-with-fn.c -o ptr-with-fn.o
 exchange-pointer:
 	gcc $(CFLAGS) exchange-pointer.c -o exchange-pointer.o
+ptr-from-fn:
+	gcc $(CFLAGS) ptr-from-fn.c -o ptr-from-fn.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -163,3 +165,4 @@ clean:
 	rm -f travers-llist.o
 	rm -f ptr-with-fn.o
 	rm -f exchange-pointer.o
+	rm -f ptr-from-fn.o

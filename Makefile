@@ -11,7 +11,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  array-of-structures concat-array equal-strings read-line $\
  count-words dictionary-lookup str2int linked-list $\
  travers-llist ptr-with-fn exchange-pointer ptr-from-fn $\
- ptr-to-array
+ ptr-to-array copy-string
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -107,6 +107,8 @@ ptr-from-fn:
 	gcc $(CFLAGS) ptr-from-fn.c -o ptr-from-fn.o
 ptr-to-array:
 	gcc $(CFLAGS) ptr-to-array.c -o ptr-to-array.o
+copy-string:
+	gcc $(CFLAGS) copy-string.c -o copy-string.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -170,3 +172,4 @@ clean:
 	rm -f exchange-pointer.o
 	rm -f ptr-from-fn.o
 	rm -f ptr-to-array.o
+	rm -f copy-string.o

@@ -12,7 +12,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  count-words dictionary-lookup str2int linked-list $\
  travers-llist ptr-with-fn exchange-pointer ptr-from-fn $\
  ptr-to-array copy-string bitwise-and bitwise-operators $\
- shift
+ shift rotate
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -114,6 +114,8 @@ bitwise-and:
 	gcc $(CFLAGS) bitwise-and.c -o bitwise-and.o
 bitwise-operators:
 	gcc $(CFLAGS) bitwise-operators.c -o bitwise-operators.o
+rotate:
+	gcc $(CFLAGS) rotate.c -o rotate.o
 shift:
 	gcc $(CFLAGS) shift.c -o shift.o
 bubble_1:
@@ -183,3 +185,4 @@ clean:
 	rm -f bitwise-and.o
 	rm -f bitwise-operators.o
 	rm -f shift.o
+	rm -f rotate.o

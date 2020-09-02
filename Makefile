@@ -12,7 +12,7 @@ all: clean ex1 ex3 ex7 ex8 ex9 $\
  count-words dictionary-lookup str2int linked-list $\
  travers-llist ptr-with-fn exchange-pointer ptr-from-fn $\
  ptr-to-array copy-string bitwise-and bitwise-operators $\
- shift rotate
+ shift rotate days-in-month
 
 ex1:
 	gcc $(CFLAGS) ex1.c -o ex1.o
@@ -118,6 +118,8 @@ rotate:
 	gcc $(CFLAGS) rotate.c -o rotate.o
 shift:
 	gcc $(CFLAGS) shift.c -o shift.o
+days-in-month:
+	gcc $(CFLAGS) days-in-month.c -o days-in-month.o
 bubble_1:
 	gcc $(CFLAGS) bubble_1.c -o bubble_1.o
 bubble_2:
@@ -186,3 +188,4 @@ clean:
 	rm -f bitwise-operators.o
 	rm -f shift.o
 	rm -f rotate.o
+	rm -f days-in-month.o

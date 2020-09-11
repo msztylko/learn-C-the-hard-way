@@ -152,6 +152,8 @@ clean:
 	rm -f ex15.o
 	rm -f ex16.o
 	rm -f ex17.o
+	rm -f ex18.o
+	rm -f ex19.o
 	rm -f pointer-ex1.o
 	rm -f pointer-ex2.o
 	rm -f pointer-ex3.o

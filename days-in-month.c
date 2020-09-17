@@ -5,13 +5,13 @@ int main(void)
     enum month { january = 1, february, march, april, may, june,
                  july, august, september, october, november, december };
     
-    enum month aMonth;
+    enum month Month;
     int         days;
 
     printf("Enter month number: ");
-    scanf("%i", &aMonth);
+    scanf("%i", (int *)&Month);
 
-    switch (aMonth) {
+    switch (Month) {
         case january:
         case march:
         case may:
@@ -39,7 +39,7 @@ int main(void)
     if (days != 0)
         printf("Number of days is %i\n", days);
 
-    if (aMonth == february)
+    if (Month == february)
         printf("...or 29 if it's a leap year.\n");
 
     return 0;
